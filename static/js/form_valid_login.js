@@ -13,7 +13,7 @@ document.getElementById("submit")
 function validateForm(event) {
     let reg_name = /^[A-Za-z]+[A-Za-z0-9]*$/;
 
-    if (userName.value == "") {
+    if (userName.value == "" || userName.value == null) {
         event.preventDefault();
         setUsernameError("Username must not be empty");
     } else if (!reg_name.test(userName.value)) {
@@ -23,7 +23,7 @@ function validateForm(event) {
         setUsernameError("");
     }
 
-    if (password.value == "") {
+    if (password.value == "" || password.value == null) {
         event.preventDefault();
         setPasswordError("Password must not be empty");
 
