@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/styles_index.css">
+</head>
+
+<body>
+
+    {% if record != record_none -%}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/registorpage">back</a></nav>
+
+        </div>
+    </div><br><br><br><br>
+    <p>u already have acount</p>
+    {%- elif name == "" or day == "" -%}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/registorpage">back</a></nav>
+        </div>
+    </div><br><br><br><br>
+    <p>u missed to type name or day </p>
+    {%- elif password == "" -%}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/registorpage">back</a></nav>
+        </div>
+    </div><br><br><br><br>
+    <p>u missed to type password</p> {%- elif nameRegex == None -%}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/registorpage">back</a></nav>
+        </div>
+    </div><br><br><br><br><a>you have to use alphabets and numbers only</a> {%- elif dateRegex== None -%}
+    <div class="fixed-header">
+
+        <div class="container">
+            <nav><a href="/registorpage">back</a></nav>
+        </div>
+    </div><br><br><br><br>
+    <p>enter valid day formate</p> {%- else -%}
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="/loginpage">login</a>
+            </nav>
+        </div>
+    </div><br><br><br><br>
+    <p>welcome {{name}}<br>you are registored</p>
+    {%- endif %}
+
+
+
+
+</body>
+
+</html>

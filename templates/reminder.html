@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/styles_index.css">
+</head>
+
+<body>
+    {% if message_error %}
+
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="/login">back</a>
+
+            </nav>
+        </div>
+    </div>
+    <p>
+        {{message_error}}
+
+    </p> {% else %}
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="/time">time</a>
+                <a href="/weather">weather</a>
+
+            </nav>
+        </div>
+    </div>
+
+    <p>
+        welcome {{ name }}
+
+    </p>
+
+    <div class="fixed-footer">
+        <div class="container">
+            <nav>
+                <a href="/logout"> logout </a>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+</body>
+
+</html>

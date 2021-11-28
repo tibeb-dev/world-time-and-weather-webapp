@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/styles_index.css">
+</head>
+
+<body>
+    {% if error_message != error_none %}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/time">back</a></nav>
+
+        </div>
+    </div>
+    <p>{{ error_message }}</p> {% elif error != form_error %}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/time">back</a></nav>
+
+        </div>
+    </div>
+    <p>{{error}}</p> {% elif form_continent_request != form_none %}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/time">back</a></nav>
+
+        </div>
+    </div>
+    <p>choose the city from the alternative<br></p> {% for r in response %}
+
+    <p>{{r}}<br></p> {% endfor%} {% elif error_message !=form_none %}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/time">back</a></nav>
+
+        </div>
+    </div>
+    <p>{{error_message}}</p> {% else %}
+    <div class="fixed-header">
+        <div class="container">
+            <nav><a href="/time">back</a></nav>
+
+        </div>
+    </div>
+
+
+    <p>
+        continent :{{ continent}}<br> city :{{ cities }}<br> timezone :{{ timezone }} <br> datetime :{{ datetime }} <br> GMT :{{ GMT }} <br> day of the week :{{ day_of_week}}
+
+    </p>
+    <div class="fixed-footer">
+        <nav>
+            <a href="/logout"> logout </a>
+        </nav>
+    </div>
+    {% endif %}
+</body>
+
+</html>
