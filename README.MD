@@ -5,7 +5,8 @@
 - Frontend
     - HTML
     - CSS
-    - javaScript/DOM
+    - javaScript HTML DOM
+    - python jinja
 - BackEnd
     - python3/Flask
 - DataBase
