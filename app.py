@@ -249,7 +249,7 @@ def weatherapi():
         try:
             form_city_name = request.args.get("city")
             
-            URL = f"http://api.openweathermap.org/data/2.5/weather?q={form_city_name}&appid=03bafb90e71dae738fce744e860900b3"
+            URL = f"http://api.openweathermap.org/data/2.5/weather?q={form_city_name}&appid="{your api key}"
             response = requests.get(url=URL)
             response = response.json()
             
