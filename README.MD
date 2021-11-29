@@ -18,7 +18,7 @@ This web application allows user to create an account and user can search every 
 
 ## Installation Requirements
 
-- python3
+- python3 Libraries
     - Flask for the backend
     - hashlib for hashing the user password
     - re for python regular expression
